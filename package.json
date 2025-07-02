@@ -1,0 +1,36 @@
+{
+  "name": "mg-dashboard",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "node server.js",
+    "dev:server": "node --watch dashboard-api.js",
+    "dev:next": "next dev",
+    "lint": "next lint",
+    "export": "next build && next export",
+    "db:migrate": "psql $DATABASE_URL -f database/schema.sql"
+  },
+  "dependencies": {
+    "@google/generative-ai": "^0.21.0",
+    "cors": "^2.8.5",
+    "dotenv": "^16.6.1",
+    "eslint": "^9",
+    "eslint-config-next": "15.1.6",
+    "express": "^4.21.2",
+    "googleapis": "^150.0.1",
+    "next": "^15.1.6",
+    "node-fetch": "^3.3.2",
+    "pg": "^8.16.3",
+    "postcss": "^8",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "tailwindcss": "^3.4.1"
+  },
+  "devDependencies": {
+    "@eslint/eslintrc": "^3",
+    "@types/pg": "^8.11.10"
+  }
+}

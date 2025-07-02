@@ -1,0 +1,19 @@
+{
+  "name": "dashboard-api",
+  "version": "1.0.0",
+  "description": "PostgreSQL API for Dashboard task management",
+  "main": "dashboard-api.js",
+  "type": "module",
+  "scripts": {
+    "start": "node dashboard-api.js",
+    "dev": "node --watch dashboard-api.js"
+  },
+  "dependencies": {
+    "express": "^4.21.2",
+    "pg": "^8.13.1",
+    "cors": "^2.8.5"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}
