@@ -9,6 +9,8 @@ import { fileURLToPath } from 'url';
 import tasksRouter from './api/tasks.js';
 import geminiRouter from './api/gemini.js';
 import healthRouter from './api/health.js';
+import googleAuthRouter from './api/google-auth.js';
+import googleDriveRouter from './api/google-drive.js';
 
 // ES module setup
 const __filename = fileURLToPath(import.meta.url);
@@ -36,6 +38,8 @@ app.use(express.static(path.join(__dirname, '.next/static')));
 app.use('/api/tasks', tasksRouter);
 app.use('/api/gemini', geminiRouter);
 app.use('/api/health', healthRouter);
+app.use('/api', googleAuthRouter);
+app.use('/api/drive', googleDriveRouter);
 
 // Simple API-only server - frontend will be served separately
 app.get('/', (req, res) => {
@@ -46,7 +50,11 @@ app.get('/', (req, res) => {
       'GET /api/health',
       'GET /api/tasks',
       'POST /api/tasks',
-      'POST /api/gemini'
+      'POST /api/gemini',
+      'GET /api/auth/google',
+      'GET /api/google/whoami',
+      'GET /api/drive/dashboard-files',
+      'GET /api/drive/search'
     ]
   });
 });
