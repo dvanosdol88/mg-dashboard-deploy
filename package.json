@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
+    "build": "echo 'API-only server - no build needed'",
     "start": "node server.js",
     "dev:server": "node --watch dashboard-api.js",
     "dev:next": "next dev",
