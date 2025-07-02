@@ -9,7 +9,6 @@ import { fileURLToPath } from 'url';
 import tasksRouter from './api/tasks.js';
 import geminiRouter from './api/gemini.js';
 import healthRouter from './api/health.js';
-import googleRoutes from './routes/google.js'; // <-- ADDED
 
 // ES module setup
 const __filename = fileURLToPath(import.meta.url);
@@ -34,7 +33,6 @@ app.use(express.json());
 app.use(express.static(path.join(__dirname, '.next/static')));
 
 // API Routes
-app.use('/api', googleRoutes); // <-- ADDED
 app.use('/api/tasks', tasksRouter);
 app.use('/api/gemini', geminiRouter);
 app.use('/api/health', healthRouter);
